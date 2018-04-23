@@ -11,33 +11,62 @@
         android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/scoreTextView"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="157dp"
+        android:backgroundTint="#2196F3"
         android:onClick="onStartButtonClick"
-        android:text="Играть!"
-        android:textSize="24dp"
+        android:text=" Выбор уровня "
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#2196F3"
+        android:textSize="48sp"
+        android:layout_alignBottom="@+id/settings"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
-        android:layout_marginTop="15dp"
-        android:text="Настройки"
-        android:layout_alignParentTop="true"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="11sp"
+        android:layout_marginRight="11sp"
+        android:layout_marginTop="22sp"
+        android:background="@drawable/ic_star_rate_black_18dp"
+        android:onClick="onRatingButtonClickListener" />
 
     <Button
-        android:id="@+id/wins"
+        android:id="@+id/infinityMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/settings"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/settings"
-        android:layout_marginBottom="15dp"
-        android:text="Рекорды" />
+        android:text="Бесконечность"
+        android:backgroundTint="@color/purple"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:onClick="onInfinityModeButtonClick"
+        android:textStyle="italic"
+        android:layout_below="@+id/play"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/settings"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp" />
 
 </RelativeLayout>
